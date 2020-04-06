@@ -86,7 +86,6 @@ foreach( $AzResourceGroupName in $AzResourceGroupNames )
     Write-Host -ForegroundColor Yellow  "Going to update Azure NSG with following IP $MyPublicIp "
 
     #Checking Network security rules
-    ## Adding RCP + WMI
     foreach ( $AzNetworkSecurityGroup in $AzNetworkSecurityGroups)
     {
         if ( !( $AzNetworkSecurityGroup.SecurityRules | ? Name -eq $NSGRuleName)  ) 
